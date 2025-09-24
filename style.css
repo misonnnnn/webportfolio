@@ -1,0 +1,263 @@
+html {
+scroll-behavior: initial !important;
+}
+html,
+body {
+  min-height: 100%;
+  height: auto;
+  color:#fff;
+  font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+
+}
+
+
+.background{
+    background: radial-gradient(
+    circle at center,
+    #191f38,
+    #000000 
+  );
+  background-size: 100% 100%;
+  animation: glowMove 2s ease-in-out infinite alternate;
+  position:absolute;
+  top:0;    
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -99;
+}
+
+.background2{
+   background: radial-gradient(
+    circle at center,
+    #1e092f,
+    #000000 
+  );
+  background-size: 100% 100%;
+  animation: glowMove 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+  0% {
+    /* background-position: 10% 10%; */
+     background-size: 100% 100%;
+  }
+  100% {
+    /* background-position: 60% 40%; */
+     background-size: 120% 120%;
+  }
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  margin: 0;
+}
+
+section {
+  /* height: 100vh; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.scrollblock {
+  padding: 24px;
+  background-color: #ffef9e;
+  cursor: pointer;
+  position: absolute;
+    bottom: 32px;
+}
+
+.melon {
+  background-color: #ffa69e;
+}
+
+.bermuda {
+  background-color: #8ae2ce;
+}
+
+.c-scrollbar {
+  background-color: red;
+}
+
+
+
+.name {
+    position:relative;
+    font-size: 4rem;
+    color: #9333ea;   
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: glow 2s infinite alternate;
+    font-family:  ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji ;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+
+}
+
+.title{
+    width: 100%;
+    position:relative;
+    font-size: 20px;
+    color: white;   
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji ;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 0px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 0 0 0px rgb(26, 32, 62), 0 0 2px rgb(29, 24, 49), 0 0 5px rgb(45, 38, 63);
+    }
+}
+
+.scrolldownbtn{
+    position: absolute;
+    bottom: 32px;
+    padding: 24px;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+.scrolldownbtn img{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+    width: 60px;
+    /* filter: invert(1); */
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+
+.featured-projects-text{
+    font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.project-card{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    height: 280px;
+    overflow:hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover .project-info{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .3s ease;
+}
+
+.project-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8px 12px;
+    transition: .3s ease;
+    border-radius: 4px;
+
+}
+.project-info-content{
+   position:absolute;
+   bottom: 10px;
+   left: 10px;;
+}
+
+
+.project-info-content a{
+    background-color: #ffffff30;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    padding: 3px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}   
+
+.skill-card{
+  background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    display: flex;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnSendMessage{
+  background-color: #9333ea;
+  color: white  ;
+}
+.btnSendMessage:hover{
+  background-color: #7e22ce;
+} 
+
+.formInputField{
+  background-color: #1f2937;
+  color: white !important;
+  border: none;
+}
+
+
+.formInputField::placeholder{
+  color: #9ca3af;
+}
+
+.formInputField:hover, .formInputField:focus{
+  background-color: #374151;
+}
