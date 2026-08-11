@@ -1,353 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Web Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <title>John Emmanuel — Senior Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,650;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <div class="background"></div>
-    <div>
-        <section>
-            <div class="w-100 vh-100">
-                <div class="container d-flex justify-content-center align-items-center vh-100">
-                    <div>
-                        <p class="name">John Emmanuel</p>
-                        <p class="title">Backend Developer (PHP & Laravel) | API Integrator | UI Enthusiast</p>
-                    </div>
-                    <div class="scrolldownbtn" id='scrolldown'>
-                        <!-- <span>Scroll</span> -->
-                        <img src="images/scrolldown.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="w-100 bg-black"  id='scrollup'>
-                <div class="container">
-                    <div class="w-100">
-                        <h1 class="featured-projects-text my-5">Featured Projects</h1>
-                        <div class="row m-0 w-100">
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-7.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>WorkNest | ERP SYSTEM (NextJs, Laravel, JWT, MySQL)</h4>
-                                            <a target="_blank" href="https://worknest-six-rose.vercel.app/" class="btn btn-sm">View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+  <div class="dot-grid" aria-hidden="true"></div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-5.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>E Thrift Shop | E-commerce Platform (NextJs, NodeJs, Express & MySQL)</h4>
-                                            <a target="_blank" href="https://e-thrift-shop.onrender.com/" class="btn btn-sm">View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+  <div class="mobile-bar">
+    <div class="brand">John Emmanuel</div>
+    <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu">Menu</button>
+  </div>
+  <div class="backdrop" id="backdrop" hidden></div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-6.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>Pet Sitter | Booking System (NextJs)</h4>
-                                            <a target="_blank" href="https://petsitter-pied.vercel.app/pets/book" class="btn btn-sm">View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">John Emmanuel</div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-1.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>C-Trends | E-commerce Platform (on-going)</h4>
-                                            <a target="_blank" href="https://ctrends.vercel.app" class="btn btn-sm">View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+      <nav class="nav-group" aria-label="Primary">
+        <a href="#top">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5Z"/></svg>
+          Home
+        </a>
+        <a href="#projects">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18"/></svg>
+          Projects
+        </a>
+        <a href="#stack">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"/><path d="M3 12l9 4.5L21 12"/><path d="M3 16.5 12 21l9-4.5"/></svg>
+          Stack
+        </a>
+        <a href="#contact">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>
+          Contact
+        </a>
+      </nav>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-8.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>Task Management System</h4>
-                                            <a target="_blank" href="https://tskmgmt.vercel.app/" class="btn btn-sm">View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+      <nav class="nav-group nav-plain" aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Recommendations</a>
+        <a href="#contact">Affiliations</a>
+      </nav>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-4.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>Marvel Facts</h4>
-                                            <a href="https://mediumspringgreen-shark-594998.hostingersite.com/" target="_blank" class="btn btn-sm" disabled>View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+      <div class="sidebar-bottom">
+        <!-- <button class="cmd" type="button" id="askBtn" title="Ask anything">
+          <span>Ask anything</span>
+          <kbd>Alt + K</kbd>
+        </button>
+        <button class="cmd" type="button" title="Jump to projects">
+          <span>View projects</span>
+          <kbd>Alt + J</kbd>
+        </button> -->
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-3.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>AI Chat Bot (Not yet deployed)</h4>
-                                            <a href="#" target="_blank" class="btn btn-sm" disabled>View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="viewers" aria-hidden="true">
+          <div class="avatars">
+            <span></span><span></span><span></span>
+          </div>
+          Available for work
+        </div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="project-card">
-                                    <img src="images/project-3.png" alt="">
-                                    <div class="project-info">
-                                        <div class="project-info-content">
-                                            <h4>POS System (Not yet deployed)</h4>
-                                            <a href="#" target="_blank" class="btn btn-sm" disabled>View Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <p class="sidebar-mail">
+          You can reach me at
+          <a href="mailto:misonjohnemmanuel@gmail.com">misonjohnemmanuel@gmail.com</a>
+        </p>
+      </div>
+    </aside>
 
-        <section>
-            <div class="w-100 background2"  id='scrollup'>
-                <div class="container">
-                    <div class="w-100">
-                        <h1 class="featured-projects-text my-5">Skills and Technology</h1>
+    <main class="main" id="top">
+      <section class="hero">
+        <div class="portrait" aria-hidden="true">
+          <div class="dither-face">
+            <img src="images/mainpic.png" alt="John Emmanuel">
+          </div>
+        </div>
 
-                        <div class="row m-0 w-100">
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">HTML</p>
-                                </div>
-                            </div>
+        <div class="hero-copy">
+          <h1>John Emmanuel</h1>
+          <p>
+            I'm a <strong>backend developer</strong> focused on PHP &amp; Laravel.
+            I build solid APIs, ship full-stack products, and care about clean UI when it matters.
+          </p>
+          <p>
+            Right now I'm building modern web apps end-to-end — from database design to deployment —
+            and turning rough ideas into things people actually use.
+          </p>
+          <div class="socials">
+            <a href="https://github.com/" target="_blank" rel="noopener">github</a>
+            <span class="sep">/</span>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin</a>
+            <span class="sep">/</span>
+            <a href="mailto:misonjohnemmanuel@gmail.com">email</a>
+          </div>
+        </div>
+      </section>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">CSS</p>
-                                </div>
-                            </div>
+      <section class="stats" aria-label="Highlights">
+        <div class="stat">
+          <div class="value">8+</div>
+          <div class="label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="value">6+</div>
+          <div class="label">Years of Experience</div>
+        </div>
+        <div class="stat">
+          <div class="value">PHP</div>
+          <div class="label">Laravel</div>
+        </div>
+        <div class="stat">
+          <div class="value">API</div>
+          <div class="label">Integrations</div>
+        </div>
+      </section>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Javascript</p>
-                                </div>
-                            </div>
+      <section class="section" id="projects">
+        <div class="section-head">
+          <h2>01 — projects</h2>
+          <a href="#projects">All projects &gt;</a>
+        </div>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">PHP</p>
-                                </div>
-                            </div>
+        <article class="list-item">
+          <h3><a href="https://worknest-six-rose.vercel.app/" target="_blank" rel="noopener">WorkNest — ERP System</a></h3>
+          <div class="meta">Next.js · Laravel</div>
+          <p class="snippet">Full ERP stack with JWT auth and MySQL — ops, records, and workflows in one place.</p>
+        </article>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Code Igniter</p>
-                                </div>
-                            </div>
+        <article class="list-item">
+          <h3><a href="https://e-thrift-shop.onrender.com/" target="_blank" rel="noopener">E Thrift Shop — E-commerce</a></h3>
+          <div class="meta">Next.js · Node</div>
+          <p class="snippet">Marketplace platform with Express &amp; MySQL for browsing, cart, and checkout flows.</p>
+        </article>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Laravel</p>
-                                </div>
-                            </div>
+        <article class="list-item">
+          <h3><a href="https://petsitter-pied.vercel.app/pets/book" target="_blank" rel="noopener">Pet Sitter — Booking System</a></h3>
+          <div class="meta">Next.js</div>
+          <p class="snippet">Booking experience for pet care — schedules, pets, and reservations without the clutter.</p>
+        </article>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">MySQL</p>
-                                </div>
-                            </div>
+        <article class="list-item">
+          <h3><a href="https://ctrends.vercel.app" target="_blank" rel="noopener">C-Trends — E-commerce Platform</a></h3>
+          <div class="meta">On-going</div>
+          <p class="snippet">Storefront in progress — product catalog and shopping flow built for modern commerce.</p>
+        </article>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Bootstrap</p>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">JQuery</p>
-                                </div>
-                            </div>
+        <article class="list-item">
+          <h3><a href="https://tskmgmt.vercel.app/" target="_blank" rel="noopener">Task Management System</a></h3>
+          <div class="meta">Web app</div>
+          <p class="snippet">Lightweight task tracking for teams — create, organize, and close work with less friction.</p>
+        </article>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">AJAX</p>
-                                </div>
-                            </div>
+        <article class="list-item">
+          <h3><a href="https://mediumspringgreen-shark-594998.hostingersite.com/" target="_blank" rel="noopener">Marvel Facts</a></h3>
+          <div class="meta">Fun project</div>
+          <p class="snippet">A small content site exploring Marvel trivia — simple, fast, and fun to browse.</p>
+        </article>
+      </section>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">ReactJS</p>
-                                </div>
-                            </div>
+      <section class="section" id="experience">
+        <div class="section-head">
+          <h2>02 — focus</h2>
+        </div>
+        <article class="list-item">
+          <h3>Backend Developer (PHP &amp; Laravel)</h3>
+          <div class="meta">Core</div>
+          <p class="snippet">APIs, auth, databases, and reliable server-side architecture for production apps.</p>
+        </article>
+        <article class="list-item">
+          <h3>API Integrator</h3>
+          <div class="meta">Integrations</div>
+          <p class="snippet">Connecting third-party services and internal systems so products talk to each other cleanly.</p>
+        </article>
+        <article class="list-item">
+          <h3>UI Enthusiast</h3>
+          <div class="meta">Frontend</div>
+          <p class="snippet">When I build the interface, I care about clarity, hierarchy, and a calm reading experience.</p>
+        </article>
+      </section>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">NextJS</p>
-                                </div>
-                            </div>
+      <section class="section" id="stack">
+        <div class="section-head">
+          <h2>03 — stack</h2>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-item"><span>Language</span>PHP</div>
+          <div class="stack-item"><span>Framework</span>Laravel</div>
+          <div class="stack-item"><span>Framework</span>CodeIgniter</div>
+          <div class="stack-item"><span>Database</span>MySQL</div>
+          <div class="stack-item"><span>Frontend</span>HTML / CSS</div>
+          <div class="stack-item"><span>Frontend</span>JavaScript</div>
+          <div class="stack-item"><span>Library</span>jQuery · AJAX</div>
+          <div class="stack-item"><span>UI</span>Bootstrap</div>
+          <div class="stack-item"><span>React</span>ReactJS</div>
+          <div class="stack-item"><span>Meta</span>Next.js</div>
+          <div class="stack-item"><span>Runtime</span>Node.js</div>
+          <div class="stack-item"><span>API</span>Express · JWT</div>
+          <div class="stack-item"><span>Ops</span>Git · Deploy</div>
+          <div class="stack-item"><span>Ops</span>Cron · Shell</div>
+          <div class="stack-item"><span>Automation</span>Laravel Jobs</div>
+          <div class="stack-item"><span>Hosting</span>Vercel · Render · Hostinger</div>
+        </div>
+      </section>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">NodeJS</p>
-                                </div>
-                            </div>
+      <section class="section" id="contact">
+        <div class="section-head">
+          <h2>04 — contact</h2>
+        </div>
+        <div class="contact-block">
+          <p>Have a project in mind? Let's create something solid together.</p>
+          <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks — update this form to your email endpoint.');">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@email.com" required>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell me about the project…" required></textarea>
+            </label>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">ExpressJS</p>
-                                </div>
-                            </div>
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const toggle = document.getElementById("menuToggle");
+    const backdrop = document.getElementById("backdrop");
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">GIT</p>
-                                </div>
-                            </div>
+    function openMenu() {
+      sidebar.classList.add("open");
+      backdrop.hidden = false;
+      backdrop.classList.add("show");
+      toggle.textContent = "Close";
+    }
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Laravel Automation</p>
-                                </div>
-                            </div>
+    function closeMenu() {
+      sidebar.classList.remove("open");
+      backdrop.classList.remove("show");
+      backdrop.hidden = true;
+      toggle.textContent = "Menu";
+    }
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">JWT</p>
-                                </div>
-                            </div>
+    toggle.addEventListener("click", () => {
+      sidebar.classList.contains("open") ? closeMenu() : openMenu();
+    });
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">API Integration</p>
-                                </div>
-                            </div>
+    backdrop.addEventListener("click", closeMenu);
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Hosting & Deployment</p>
-                                </div>
-                            </div>
+    sidebar.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 900px)").matches) closeMenu();
+      });
+    });
 
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Basic Shell Scripting</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 col-xs-6 col-6 text-center mb-4 d-flex justify-content-center">
-                                <div class="p-2 skill-card">
-                                    <p class="m-0 p-0">Cron Jobs</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="w-100 bg-black"  id='scrollup'>
-                <div class="container">
-                    <div class="w-100">
-                        <h1 class="featured-projects-text mt-5 ">Let's Connect</h1>
-                        <p class="text-light m-2 text-center p-0 m-0">Have a project in mind? Let's create something amazing together.</p>
-                        <form action="">
-                            <div class="d-flex justify-content-center align-items-center w-100 my-5 w-100">
-                                <div class="form-row w-100">
-                                    <div class="col-lg-6 mb-3 mx-auto">
-                                        <input type="text" class="form-control formInputField form-control-sm" placeholder="Name" required>
-                                    </div>
-                                    <div class="col-lg-6 mb-3 mx-auto">
-                                        <input type="email" class="form-control formInputField form-control-sm" placeholder="Email" required>
-                                    </div>
-                                    <div class="col-lg-6 mb-3 mx-auto">
-                                        <textarea class="form-control formInputField form-control-sm" rows="5" placeholder="Message" required></textarea>
-                                    </div>
-                                    <div class="col-lg-6 mb-3 mx-auto d-flex justify-content-end">
-                                        <button class="btn btnSendMessage">Send Message</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </body>
+    document.addEventListener("keydown", (e) => {
+      if (e.altKey && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        document.getElementById("askBtn")?.focus();
+      }
+      if (e.altKey && e.key.toLowerCase() === "j") {
+        e.preventDefault();
+        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+      }
+      if (e.key === "Escape") closeMenu();
+    });
+  </script>
+</body>
 </html>
-
-
-<script  type="module">
-    import Lenis from "https://cdn.skypack.dev/@studio-freight/lenis@0.2.28";
-
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-  direction: 'vertical', // vertical, horizontal
-  gestureDirection: 'vertical', // vertical, horizontal, both
-  smooth: true,
-  mouseMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false,
-})
-
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
-
-const scrollDownButton = document.getElementById("scrolldown");
-const scrollUpButton = document.getElementById("scrollup");
-
-scrollDownButton.addEventListener('click', () => { 
-  lenis.scrollTo("#scrollup")
-})
-
-
-scrollUpButton.addEventListener('click', () => { 
-//   lenis.scrollTo("#scrolldown", {
-//     offset: -50,
-//     duration: 1,
-//     easing: (t) => {
-//       const c1 = 1.70158;
-//       const c2 = c1 * 1.525;
-
-//       return t < 0.5
-//         ? (Math.pow(2 * t, 2) * ((c2 + 1) * 2 * t - c2)) / 2
-//         : (Math.pow(2 * t - 2, 2) * ((c2 + 1) * (t * 2 - 2) + c2) + 2) / 2;
-//       }, 
-//     })
-})
-
-
-</script>
